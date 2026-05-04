@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #ffffff;
+  color: #111111;
+}
+
+.site-header {
+  width: 100%;
+  height: 100px;
+  background-color: #facaca;
+  padding: 0 126px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.22);
+}
+
+.logo {
+  width: 190px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 260px;
+  height: 260px;
+  object-fit: contain;
+  display: block;
+}
+
+nav {
+  width: 900px;
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.active {
+  color: #000000;
+}
+
+.projects-section {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 62px 0 0;
+}
+
+.projects-section h1 {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 49px;
+  color: #ee9fa2;
+  text-align: center;
+  margin-bottom: 56px;
+  font-weight: 900;
+}
+
+.project-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.project-card {
+  width: 616px;
+  min-height: 520px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 18px 18px 34px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(134, 92, 92, 0.18);
+}
+
+.project-card img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin-bottom: 22px;
+}
+
+.project-card h2 {
+  font-size: 20px;
+  color: #ee9fa2;
+  margin-bottom: 4px;
+  font-weight: 900;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.18);
+}
+
+.project-card p {
+  width: 510px;
+  margin: 0 auto;
+  font-size: 21px;
+  line-height: 1.35;
+}
+
+.project-card a {
+  display: inline-block;
+  color: #ee9fa2;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 900;
+}
+
+footer {
+  width: 95.8%;
+  height: 55px;
+  margin: 84px auto 0;
+  background-color: #facaca;
+  border-radius: 18px 18px 0 0;
+}
