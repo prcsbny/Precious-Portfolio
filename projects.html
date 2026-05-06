@@ -7,24 +7,108 @@
   <link rel="stylesheet" href="projects.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="logo"><img src="asset/logo.png" alt="pbworks logo"></div>
-    <nav>
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a class="active" href="projects.html">Projects</a></li>
-        <li><a href="contacts.html">Contacts</a></li>
-      </ul>
-    </nav>
-  </header>
-  <section class="projects-section">
-    <h1>MY WORKS</h1>
-    <div class="project-list">
-      <div class="project-card"><img src="asset/traditional.jpg" alt="Traditional drawing"><h2>TRADITIONAL DRAWINGS</h2><p>A collection of my hand-drawn artworks using pencil and ink.</p><a href="#">View</a></div>
-      <div class="project-card"><img src="asset/digital.jpg" alt="Digital drawing"><h2>DIGITAL DRAWINGS</h2><p>A set of my digital artworks created using drawing applications.</p><a href="#">View</a></div>
+
+<header class="site-header">
+  <div class="logo">
+    <img src="asset/logo.png" alt="pbworks logo">
+  </div>
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a class="active" href="projects.html">Projects</a></li>
+      <li><a href="contacts.html">Contacts</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="projects-section">
+  <h1>MY WORKS</h1>
+
+  <div class="project-list">
+
+    <div class="project-card">
+      <img src="asset/traditional.jpg">
+      <h2>TRADITIONAL DRAWINGS</h2>
+      <p>A collection of my hand-drawn artworks using pencil and ink.</p>
+      <a href="#" id="openTraditional">View</a>
     </div>
-  </section>
-  <footer></footer>
+
+
+    <div class="project-card">
+      <img src="asset/digital.jpg">
+      <h2>DIGITAL DRAWINGS</h2>
+      <p>A set of my digital artworks created using drawing applications.</p>
+      <a href="#" id="openDigital">View</a>
+    </div>
+
+  </div>
+</section>
+
+<div id="popupTraditional" class="popup">
+  <div class="popup-content">
+    <span class="close" id="closeTraditional">&times;</span>
+    <h2>Traditional Drawings</h2>
+
+    <div class="popup-gallery">
+      <img src="https://via.placeholder.com/200">
+      <img src="https://via.placeholder.com/200">
+      <img src="https://via.placeholder.com/200">
+    </div>
+  </div>
+</div>
+
+<div id="popupDigital" class="popup">
+  <div class="popup-content">
+    <span class="close" id="closeDigital">&times;</span>
+    <h2>Digital Drawings</h2>
+
+    <div class="popup-gallery">
+      <img src="https://via.placeholder.com/200">
+      <img src="https://via.placeholder.com/200">
+      <img src="https://via.placeholder.com/200">
+    </div>
+  </div>
+</div>
+
+<footer></footer>
+
+<script>
+  const openTraditional = document.getElementById("openTraditional");
+  const popupTraditional = document.getElementById("popupTraditional");
+  const closeTraditional = document.getElementById("closeTraditional");
+
+  openTraditional.onclick = function(e) {
+    e.preventDefault();
+    popupTraditional.style.display = "flex";
+  }
+
+  closeTraditional.onclick = function() {
+    popupTraditional.style.display = "none";
+  }
+
+  const openDigital = document.getElementById("openDigital");
+  const popupDigital = document.getElementById("popupDigital");
+  const closeDigital = document.getElementById("closeDigital");
+
+  openDigital.onclick = function(e) {
+    e.preventDefault();
+    popupDigital.style.display = "flex";
+  }
+
+  closeDigital.onclick = function() {
+    popupDigital.style.display = "none";
+  }
+
+  window.onclick = function(e) {
+    if (e.target === popupTraditional) {
+      popupTraditional.style.display = "none";
+    }
+    if (e.target === popupDigital) {
+      popupDigital.style.display = "none";
+    }
+  }
+</script>
+
 </body>
 </html>
